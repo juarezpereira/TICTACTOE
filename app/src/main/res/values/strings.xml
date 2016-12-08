@@ -11,4 +11,11 @@
     <string name="activity_main_label_status">Status: não iniciado</string>
     <!-- MainActivity -->
 
+    <!-- GameStartAcitivy -->
+    <string name="gameActivity_label_player">Jogador da vez: %1$s</string>
+    <string name="gameActivity_label_player_one">Jogador 1: %1$s X</string>
+    <string name="gameActivity_label_player_two">Jogador 2: %1$s O</string>
+    <string name="gameActivity_label_status">Status: %1$s</string>
+    <!-- GameStartAcitivy -->
+
 </resources>

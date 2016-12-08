@@ -6,7 +6,6 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
-        <item name="android:colorBackground">@color/colorBackground</item>
     </style>
 
     <style name="TextView">
@@ -17,9 +16,9 @@
         <item name="android:textColor">@color/colorTextView</item>
     </style>
     
-    <style name="Bottom" parent="Widget.AppCompat.Button.Colored">
+    <style name="Button" parent="Widget.AppCompat.Button.Colored">
         <item name="colorButtonNormal">@color/colorButton</item>
-        <item name="android:textColor">@color/colorPrimaryText</item>
+        <item name="android:textColor">@android:color/white</item>
         <item name="android:textStyle">bold</item>
     </style>
 

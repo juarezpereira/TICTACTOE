@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
@@ -7,29 +7,25 @@
     android:layout_height="match_parent"
     android:paddingRight="@dimen/activity_padding_base"
     android:paddingLeft="@dimen/activity_padding_base"
-    android:orientation="vertical"
+    android:paddingTop="@dimen/activity_padding_base"
+    android:paddingBottom="@dimen/activity_padding_base"
     tools:context="com.example.juarez.tictactoe.MainActivity">
 
-    <ImageView
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_gravity="center"
-        android:layout_margin="@dimen/activity_margin_base"
-        android:src="@drawable/pound"
-        android:tint="@color/colorPrimaryLight"
-        android:contentDescription="@string/activity_main_app_icon_content_description"/>
-
     <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/labelPlayer1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activity_main_label_player_one"
         style="@style/TextView"/>
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/InputLayoutMat1"
+        android:layout_below="@id/labelPlayer1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/tvMatricula1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/activity_main_field_hint_matricula"/>
@@ -37,10 +33,13 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/InputLayoutNome1"
+        android:layout_below="@id/InputLayoutMat1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/tvNome1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/activity_main_field_hint_nome"/>
@@ -48,16 +47,21 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/labelPlayer2"
+        android:layout_below="@id/InputLayoutNome1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activity_main_label_player_two"
         style="@style/TextView"/>
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/InputLayoutMat2"
+        android:layout_below="@id/labelPlayer2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/tvMatricula2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/activity_main_field_hint_matricula"/>
@@ -65,10 +69,13 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
+        android:id="@+id/InputLayoutNome2"
+        android:layout_below="@id/InputLayoutMat2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/tvNome2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/activity_main_field_hint_nome"/>
@@ -76,16 +83,19 @@
     </android.support.design.widget.TextInputLayout>
 
     <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/tvStatus"
+        android:layout_below="@id/InputLayoutNome2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/activity_main_label_status"
         style="@style/TextView"/>
 
     <android.support.v7.widget.AppCompatButton
+        android:id="@+id/btnIniciar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true"
         android:text="@string/activity_main_button_label_start"
-        android:theme="@style/Bottom"/>
+        android:theme="@style/Button"/>
 
-</LinearLayout>
+</RelativeLayout>
