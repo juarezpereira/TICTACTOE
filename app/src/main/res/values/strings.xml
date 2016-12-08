@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">TIC TAC TOE</string>
+
+    <!-- MainActivity -->
+    <string name="activity_main_field_hint_matricula">Matricula</string>
+    <string name="activity_main_field_hint_nome">Nome</string>
+    <string name="activity_main_label_player_one">Jogador 1</string>
+    <string name="activity_main_label_player_two">Jogador 2</string>
+    <string name="activity_main_button_label_start">Iniciar</string>
+    <string name="activity_main_app_icon_content_description">Icone do app</string>
+    <string name="activity_main_label_status">Status: não iniciado</string>
+    <!-- MainActivity -->
+
 </resources>
