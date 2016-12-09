@@ -9,6 +9,7 @@
     <string name="activity_main_button_label_start">Iniciar</string>
     <string name="activity_main_app_icon_content_description">Icone do app</string>
     <string name="activity_main_label_status">Status: não iniciado</string>
+    <string name="activity_main_label_status_wins">Status: %1$s</string>
     <!-- MainActivity -->
 
     <!-- GameStartAcitivy -->
@@ -16,6 +17,7 @@
     <string name="gameActivity_label_player_one">Jogador 1: %1$s X</string>
     <string name="gameActivity_label_player_two">Jogador 2: %1$s O</string>
     <string name="gameActivity_label_status">Status: %1$s</string>
+    <string name="gameActivity_label_player_wins">%1$s venceu!!!</string>
     <!-- GameStartAcitivy -->
 
 </resources>

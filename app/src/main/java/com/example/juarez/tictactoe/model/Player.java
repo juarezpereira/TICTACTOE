@@ -40,6 +40,10 @@ public class Player implements Parcelable {
         this.matricula = matricula;
     }
 
+    public boolean isPlayer(int id){
+        return this.id == id;
+    }
+
 
     @Override
     public int describeContents() {

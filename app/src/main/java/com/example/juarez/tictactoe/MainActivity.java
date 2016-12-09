@@ -26,9 +26,8 @@ public class MainActivity extends AppCompatActivity {
     TextView tvNome1;
     @BindView(R.id.tvNome2)
     TextView tvNome2;
-
-    private Player mPlayerOne;
-    private Player mPlayerTwo;
+    @BindView(R.id.tvStatus)
+    TextView tvStatus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,12 +38,12 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick(R.id.btnIniciar)
     public void onClick(View v){
-        this.mPlayerOne = new Player();
+        Player mPlayerOne = new Player();
         mPlayerOne.setId(1);
         mPlayerOne.setNome(tvNome1.getText().toString());
         mPlayerOne.setMatricula(Double.parseDouble(tvMatricula1.getText().toString()));
 
-        this.mPlayerTwo = new Player();
+        Player mPlayerTwo = new Player();
         mPlayerTwo.setId(2);
         mPlayerTwo.setNome(tvNome2.getText().toString());
         mPlayerTwo.setMatricula(Double.parseDouble(tvMatricula2.getText().toString()));
@@ -54,6 +53,21 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(PLAYER_2_EXTRAS,mPlayerTwo);
 
         startActivityForResult(intent,REQUEST_START_GAME);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if(requestCode == REQUEST_START_GAME){
+            if(resultCode == RESULT_OK){
+                String message = data.getExtras().getString(GameStartActivity.MESSAGE_EXTRAS);
+                if(message != null && !message.equals("Empatou!")){
+                    this.tvStatus.setText(String.format(getString(R.string.activity_main_label_status_wins),message+" venceu!"));
+                    return;
+                }
+                this.tvStatus.setText(String.format(getString(R.string.activity_main_label_status_wins),message));
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
     }
 
 }
